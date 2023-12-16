@@ -33,6 +33,39 @@ Reference web site: <https://uploadthing.com/>
 npm install uploadthing @uploadthing/react 
 ```
 
+### Add authentication (Clerk)
+
+Reference web site: <https://clerk.com/>
+
+- Go to the web site
+- Click on "Add Application"
+- Configure the SigIn screen i.e. the \<SignIn \/\> component
+- Copy the API keys to the .env.local file
+- Click on "Continue in docs"
+
+```bash
+npm install @clerk/nextjs
+```
+
+- Wrap your app in \<ClerkProvider\> as indicated in the documentation
+- Create a middleware.ts file, copy the content from the documentation
+- Update the middleware.ts by specifing the publicRoutes and ignoredRoutes
+- On the configuration screen go to the Configure sections and select User & Authentication
+- on Social Connections: select the desired providers
+- om Email. Phone, Username screen select Username
+- on the application create a sign-in and [[...sign-in]] directory below (auth)
+- create a page.tsx and just add the \<SignIn /> component
+- do the same for the sign-up
+- add the following in the .env.local
+
+- NEXT_PUBLIC_CLERK_SIGN_IN_URL=/sign-in
+- NEXT_PUBLIC_CLERK_SIGN_UP_URL=/sign-up
+- NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL=/
+- NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL=/
+
+- create a specific layout.tsx in the (auth)
+- configure the layout by defining a Layout constant
+
 ## Configuring the application
 
 Add route groop (root) and (auth) too keep the folder and structure clean.
@@ -53,3 +86,10 @@ Add route groop (root) and (auth) too keep the folder and structure clean.
 - add a layout.tsx in the (root) directory
 - copy only the export default function RootLayout section
 - remove the className as it is not needed (already provied by the global layout.tsx)
+
+### Create a Header & Footer
+
+- in the componets folder add a "sgared" folder
+- create a Header.tsx and Footer.tsx
+- update the layout.tsx in the (root) directory accordingley
+- In the header add the SignedIn and SignedOut
