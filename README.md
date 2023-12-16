@@ -1,36 +1,55 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+# evently project
 
-First, run the development server:
+## Quick Start
+
+### Create the application
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npx create-next-app@latest ./
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Add shadcn
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Reference web site: <https://ui.shadcn.com/>
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+```bash
+npx shadcn-ui@latest init
+```
 
-## Learn More
+accept the default values but specify the tailwind.config.ts file (instead of js)
 
-To learn more about Next.js, take a look at the following resources:
+#### Add the following ui components
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+npx shadcn-ui@latest add button
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### Add uploadthing
 
-## Deploy on Vercel
+Reference web site: <https://uploadthing.com/>
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+npm install uploadthing @uploadthing/react 
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Configuring the application
+
+Add route groop (root) and (auth) too keep the folder and structure clean.
+
+### Configure the layout.tsx
+
+- import the Poppins font
+- update the metadata
+- update the className
+
+### Import the public folder
+
+- add icons and images
+- update the favicon.ico (to be placed on the app directory)
+
+### Configure spefic layout.tsx
+
+- add a layout.tsx in the (root) directory
+- copy only the export default function RootLayout section
+- remove the className as it is not needed (already provied by the global layout.tsx)
