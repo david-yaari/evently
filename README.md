@@ -15,6 +15,7 @@ Reference web site: <https://ui.shadcn.com/>
 
 ```bash
 npx shadcn-ui@latest init
+
 ```
 
 accept the default values but specify the tailwind.config.ts file (instead of js)
@@ -23,6 +24,9 @@ accept the default values but specify the tailwind.config.ts file (instead of js
 
 ```bash
 npx shadcn-ui@latest add button
+npx shadcn-ui@latest add sheet
+npx shadcn-ui@latest add separator
+
 ```
 
 ### Add uploadthing
@@ -93,3 +97,11 @@ Add route groop (root) and (auth) too keep the folder and structure clean.
 - create a Header.tsx and Footer.tsx
 - update the layout.tsx in the (root) directory accordingley
 - In the header add the SignedIn and SignedOut
+- Add the relevant buttons (check UserButton from Clerk)
+
+### Create a Navbar
+
+- in the shared directory create a Navbar component (NavItems and MobileNav in this case)
+- add this component to the Header component
+- In the MobileNav add the Sheet components <https://ui.shadcn.com/docs/components/sheet>
+- In the NavItems use a array defined in the constant directory, index.tsx for the menu items
