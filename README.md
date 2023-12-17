@@ -70,6 +70,26 @@ npm install @clerk/nextjs
 - create a specific layout.tsx in the (auth)
 - configure the layout by defining a Layout constant
 
+### <https://clerk.com/docs/users/sync-data#sync-clerk-data-to-your-backend-with-webhooks>
+
+- <https://clerk.com/docs/users/sync-data#understanding-the-webhook-payload>
+
+```bash
+npm install svix
+```
+
+- <https://clerk.com/docs/users/sync-data#create-the-endpoint-in-your-application>
+- <https://clerk.com/docs/users/sync-data#add-your-signing-secret-to-your-env-local-file>
+
+- On the Clerk dashboard go to Webhooks, add an Endopint
+- Endpoint URL: x
+
+## uery-string
+
+```bash
+npm install query-string
+```
+
 ## Configuring the application
 
 Add route groop (root) and (auth) too keep the folder and structure clean.
@@ -105,3 +125,12 @@ Add route groop (root) and (auth) too keep the folder and structure clean.
 - add this component to the Header component
 - In the MobileNav add the Sheet components <https://ui.shadcn.com/docs/components/sheet>
 - In the NavItems use a array defined in the constant directory, index.tsx for the menu items
+
+## MongoDb Database
+
+- In the lib directory create a mongodb, database directories and finally an index.ts
+- Run the following packages
+
+```bash
+npm install mongoose mongodb
+```
