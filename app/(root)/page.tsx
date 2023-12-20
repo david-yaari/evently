@@ -1,10 +1,21 @@
 import CategoryFilter from '@/components/shared/CategoryFilter';
+import Collection from '@/components/shared/Collection';
 import Search from '@/components/shared/Search';
 import { Button } from '@/components/ui/button';
+import { getAllEvents } from '@/lib/actions/event.actions';
 import Image from 'next/image';
 import Link from 'next/link';
 
-export default function Home() {
+export default async function Home() {
+  const events = await getAllEvents({
+    query: '',
+    category: '',
+    page: 1,
+    limit: 6,
+  });
+
+  const page = 1;
+
   return (
     <>
       {/* Hero Section */}
@@ -50,7 +61,7 @@ export default function Home() {
           <CategoryFilter />
         </div>
 
-        {/* <Collection
+        <Collection
           data={events?.data}
           emptyTitle='No Events Found'
           emptyStateSubtext='Come back later'
@@ -58,7 +69,7 @@ export default function Home() {
           limit={6}
           page={page}
           totalPages={events?.totalPages}
-        /> */}
+        />
       </section>
     </>
   );

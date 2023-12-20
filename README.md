@@ -29,6 +29,37 @@ npx shadcn-ui@latest add separator
 
 ```
 
+- Add the Form component <https://ui.shadcn.com/docs/components/form>
+
+```bash
+npx shadcn-ui@latest add form
+npx shadcn-ui@latest add input
+```
+
+- Add the Select component <https://ui.shadcn.com/docs/components/select>
+
+```bash
+npx shadcn-ui@latest add select
+```
+
+- Add an Alert Dialog <https://ui.shadcn.com/docs/components/alert-dialog>
+
+```bash
+npx shadcn-ui@latest add alert-dialog
+```
+
+- Add the Textarea component <https://ui.shadcn.com/docs/components/textarea>
+
+```bash
+npx shadcn-ui@latest add textarea
+```
+
+- Add Checkbox
+
+```bash
+npx shadcn-ui@latest add checkbox
+```
+
 ### Add uploadthing
 
 Reference web site: <https://uploadthing.com/>
@@ -36,6 +67,10 @@ Reference web site: <https://uploadthing.com/>
 ```bash
 npm install uploadthing @uploadthing/react 
 ```
+
+- read the documentation <https://docs.uploadthing.com/getting-started/appdir>
+
+- use useDropzone <https://docs.uploadthing.com/api-reference/react#usedropzone>
 
 ### Add authentication (Clerk)
 
@@ -89,6 +124,23 @@ npm install svix
 ```bash
 npm install query-string
 ```
+
+## Install Date-Picker component
+
+```bash
+npm install react-datepicker --save
+npm i --save-dev @types/react-datepicker
+```
+
+## Install the Stripe component
+
+```bash
+npm install --save stripe @stripe/stripe-js next
+
+```
+
+- Follow the documentation: <https://stripe.com/docs/checkout/quickstart>
+- Add the Webhook: <https://dashboard.stripe.com/test/webhooks/create>
 
 ## Configuring the application
 
