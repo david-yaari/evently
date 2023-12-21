@@ -18,8 +18,7 @@ const Header = () => {
             alt='Evently logo'
             width={128}
             height={38}
-            priority
-          ></Image>
+          />
         </Link>
 
         <SignedIn>
